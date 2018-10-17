@@ -8,6 +8,24 @@ namespace ACM.BLTest
     public class CustomerTest
     {
         [TestMethod]
+        public void StaticTest()
+        {
+            // Arrange
+            var c1 = new Customer();
+            c1.FirstName = "Bilbo";
+            var c2 = new Customer();
+            c1.FirstName = "Frodo";
+            var c3 = new Customer();
+            c1.FirstName = "Rosie";
+
+            // Act
+
+
+            // Assert
+            Assert.AreEqual(Customer.InstanceCount, 3);
+
+        }
+        [TestMethod]
         public void FullNameTestValid()
         {
             // -- Arrange
