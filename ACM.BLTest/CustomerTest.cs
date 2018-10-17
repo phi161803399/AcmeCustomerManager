@@ -70,5 +70,71 @@ namespace ACM.BLTest
             // -- Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ValidateValid()
+        {
+            // Arrange
+            var customer = new Customer();
+            customer.LastName = "Baggins";
+            customer.EmailAddress = "fbaggins@hobbiton.me";
+
+            var expected = true;
+
+            // Act
+            var actual = customer.Validata();
+
+            // Assert
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            // Arrange
+            var customer = new Customer();
+            customer.EmailAddress = "fbaggins@hobbiton.me";
+
+            var expected = false;
+
+            // Act
+            var actual = customer.Validata();
+
+            // Assert
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void ValidateMissingEmailAddress()
+        {
+            // Arrange
+            var customer = new Customer();
+            customer.LastName = "Baggins";
+
+            var expected = false;
+
+            // Act
+            var actual = customer.Validata();
+
+            // Assert
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void ValidateWhiteSpaceLastName()
+        {
+            // Arrange
+            var customer = new Customer();
+            customer.LastName = "";
+            customer.EmailAddress = "fbaggins@hobbiton.me";
+
+            var expected = false;
+
+            // Act
+            var actual = customer.Validata();
+
+            // Assert
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
