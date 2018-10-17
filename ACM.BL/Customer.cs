@@ -12,6 +12,11 @@ namespace ACM.BL
         {
             InstanceCount++;
         }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
         public static int InstanceCount { get; set; }
         private string _lastName;
         public string LastName
