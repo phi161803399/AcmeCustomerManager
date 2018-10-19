@@ -7,6 +7,19 @@ namespace ACM.BLTest
     [TestClass]
     public class CustomerTest
     {
+        //[TestMethod]
+        public void DefaultConstructorTest()
+        {
+            // Arrange
+            var c1 = new Customer();
+            //var c2 = new Customer();
+
+            // Act
+
+            // Assert
+            Assert.AreEqual(c1.CustomerId, 0);
+
+        }
         [TestMethod]
         public void StaticTest()
         {
