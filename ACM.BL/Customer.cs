@@ -9,13 +9,17 @@ namespace ACM.BL
     public class Customer
     {
         public Customer()
+            : this(0)
         {
+            //Console.WriteLine("Call from default constructor");
             InstanceCount++;
         }
 
         public Customer(int customerId)
         {
+            //Console.WriteLine("Call from Customer(int customerId)");
             this.CustomerId = customerId;
+            AddressList = new List<Address>();
         }
         public static int InstanceCount { get; set; }
         private string _lastName;
@@ -35,8 +39,9 @@ namespace ACM.BL
         public string EmailAddress { get; set; }
 
         public int CustomerId { get; private set; }
-        public string HomeAddress { get; set; }
-        public string WorkAddress { get; set; }
+        //public string HomeAddress { get; set; }
+        //public string WorkAddress { get; set; }
+        public List<Address> AddressList { get; set; }
 
         public string FullName
         {
