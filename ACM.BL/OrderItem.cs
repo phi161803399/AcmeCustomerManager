@@ -12,40 +12,37 @@ namespace ACM.BL
         {
 
         }
+
         public OrderItem(int orderItemId)
         {
             this.OrderItemId = orderItemId;
         }
-
         public int OrderItemId { get; private set; }
         public int OrderQuantity { get; set; }
         public int ProductId { get; set; }
         public decimal? PurchasePrice { get; set; }
 
-
         /// <summary>
-        /// Retrieve one order item
+        /// Retrieve one order item.
         /// </summary>
-        /// <param name="orderItemId"></param>
-        /// <returns></returns>
         public OrderItem Retrieve(int orderItemId)
         {
-            // code that retrieves the defined order item
+            // Code that retrieves the defined order item
             return new OrderItem();
         }
 
         /// <summary>
-        /// Saves the current order item
+        /// Saves the current order item.
         /// </summary>
         /// <returns></returns>
         public bool Save()
         {
-            // code that saves current order item
+            // Code that saves the defined order item
             return true;
         }
 
         /// <summary>
-        /// Validates the order item data
+        /// Validates the order item data.
         /// </summary>
         /// <returns></returns>
         public bool Validate()
