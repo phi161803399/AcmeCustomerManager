@@ -22,22 +22,7 @@ namespace ACM.BL
         public string ProductDescription { get; set; }
         public string ProductName { get; set; }
 
-        /// <summary>
-        /// Retrieve one product
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        public Product Retrieve(int productId)
-        {
-            // code that retrieves one product
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            // code that saves the product
-            return true;
-        }
+        
 
         public bool Validate()
         {
