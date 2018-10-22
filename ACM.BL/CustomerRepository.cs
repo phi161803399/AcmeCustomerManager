@@ -8,7 +8,7 @@ namespace ACM.BL
 {
     public class CustomerRepository
     {
-        public AddressRepository addressRepository { get; set; }
+        private AddressRepository addressRepository { get; set; }
         public CustomerRepository()
         {
             addressRepository = new AddressRepository();
