@@ -8,5 +8,22 @@ namespace Acme.Common
 {
     public class StringHandler
     {
+        public string InsertSpaces(string source)
+        {
+            string result = string.Empty;
+            if (!String.IsNullOrWhiteSpace(source))
+            {
+                foreach (char letter in source)
+                {
+                    if (source.IndexOf(letter) == 0) continue;                    
+                    if (char.IsUpper(letter))
+                    {
+                        result += " ";
+                    }
+                    result += letter;
+                }
+            }
+            return result;
+        }
     }
 }
