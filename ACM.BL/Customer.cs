@@ -35,6 +35,7 @@ namespace ACM.BL
             }
         }
 
+        public int CustomerType { get; set; }
         public string FirstName { get; set; }
         public string EmailAddress { get; set; }
 
