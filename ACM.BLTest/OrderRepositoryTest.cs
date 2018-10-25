@@ -18,6 +18,8 @@ namespace ACM.BLTest
                 OrderDate = new DateTimeOffset(2018, 10, 19, 10, 00, 00, new TimeSpan(2, 0, 0))
             };
 
+            Console.WriteLine("Order: " + expected.ToString());
+
             // Actual
             var actual = orderRepository.Retrieve(10);
 
