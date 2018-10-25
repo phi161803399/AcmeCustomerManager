@@ -33,5 +33,10 @@ namespace ACM.BL
             //return isValid;
             return !(string.IsNullOrWhiteSpace(ProductName) || (CurrentPrice == null));
         }
+
+        public override string ToString()
+        {
+            return ProductName;
+        }
     }
 }

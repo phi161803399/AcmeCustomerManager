@@ -69,5 +69,10 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
             return isValid;
         }
+
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }

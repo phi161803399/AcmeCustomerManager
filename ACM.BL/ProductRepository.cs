@@ -16,6 +16,13 @@ namespace ACM.BL
         public Product Retrieve(int productId)
         {
             Product product = new Product(productId);
+
+            // .Net Object Class
+            Object myObject = new Object();
+            Console.WriteLine("Object: " + myObject.ToString());
+            Console.WriteLine("Product: " + product.ToString());
+
+
             if (productId == 2)
             {
                 product.ProductName = "Sunflowers";
