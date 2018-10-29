@@ -13,17 +13,19 @@ namespace Acme.Common
             string result = string.Empty;
             if (!String.IsNullOrWhiteSpace(source))
             {
+                //Boolean isFirstLetter = true;
                 foreach (char letter in source)
-                {
-                    if (source.IndexOf(letter) == 0) continue;                    
-                    if (char.IsUpper(letter))
+                {                                  
+                    if (char.IsUpper(letter))   // && !isFirstLetter
                     {
+                        result = result.Trim();
                         result += " ";
                     }
                     result += letter;
+                    //isFirstLetter = false;
                 }
             }
-            return result;
+            return result.Trim();
         }
     }
 }

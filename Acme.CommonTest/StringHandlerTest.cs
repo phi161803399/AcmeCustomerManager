@@ -11,7 +11,7 @@ namespace Acme.CommonTest
         public void InsertSpacesValid()
         {
             // Arrange
-            var source = "SonicScrewdriver";
+            var source = " Sonic   Screwdriver  ";
             var expected = "Sonic Screwdriver";
 
             var handler = new StringHandler();
