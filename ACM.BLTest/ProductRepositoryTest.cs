@@ -23,7 +23,7 @@ namespace ACM.BLTest
             var actual = productRepository.Retrieve(2);
 
             // Assert
-            Assert.AreEqual(expected.ProduktId, actual.ProduktId);
+            Assert.AreEqual(expected.ProductId, actual.ProductId);
             Assert.AreEqual(expected.ProductName, actual.ProductName);
             Assert.AreEqual(expected.ProductDescription, actual.ProductDescription);
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
